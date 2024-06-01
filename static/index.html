@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="{{ favicon }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-    <script type="module" crossorigin src="/assets/index-d0a42b60.js"></script>
-    <link rel="stylesheet" href="/assets/index-37fa7fe7.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat con ChatGPT</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que el path al CSS es correcto -->
+</head>
+<body>
+    <header>
+        <h1>Interfaz de Chat con ChatGPT</h1>
+    </header>
+
+    <section>
+        <label for="model-index-selector">Selecciona un índice:</label>
+        <select id="model-index-selector">
+            <option value="index1">Index 1</option>
+            <option value="index2">Index 2</option>
+            <option value="index3">Index 3</option>
+            <!-- Agrega más opciones según los índices disponibles -->
+        </select>
+    </section>
+
+    <section id="chat-section">
+        <!-- Aquí puedes incluir el resto de tu interfaz de chat -->
+        <div id="chat-container">
+            <!-- Mensajes de chat irán aquí -->
+        </div>
+        <input type="text" id="chat-input">
+        <button id="send-button">Enviar</button>
+    </section>
+
+    <script>
+        document.getElementById('model-index-selector').addEventListener('change', function() {
+            var selectedIndex = this.value;
+            console.log("Índice seleccionado:", selectedIndex);
+            // Aquí puedes añadir el código para cambiar el índice en tu aplicación de chat
+        });
+
+        // Opcional: Añade aquí más JavaScript para manejar el envío de mensajes y otras interacciones
+    </script>
+</body>
 </html>
